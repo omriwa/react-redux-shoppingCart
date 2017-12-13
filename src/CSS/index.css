@@ -1,0 +1,55 @@
+#app {
+	text-align: center;
+	margin-top: 10%;
+}
+
+#cart-nav > * {
+	display: inline-block;
+}
+
+#cart-nav {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+#cart-headline {
+	text-align: left;
+	margin: 1%;
+}
+
+#bill {
+	margin-top: 5%;
+	text-align: left;
+}
+
+#cart-buttons {
+	text-align: right;
+}
+
+#cart-buttons > * {
+	margin-left: 5%;
+}
+
+.right-space {
+	margin-right: 5%;
+}
+
+thead {
+	background-color: cornflowerblue;
+}
+
+td , th {
+	padding-top: 2% !important;
+	padding-bottom: 2% !important;
+	text-align: right;
+}
+
+
+#shopping-cart , #bill {
+	background-color: lightgray;
+	border-radius: 5px;
+}
+
+.percentage-net {
+	float: right;
+}
