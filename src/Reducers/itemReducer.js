@@ -46,14 +46,18 @@ function itemReducer(itemList = dataSet , action) {
 			return itemList.slice();
 		break;
 
+		case 'SAVE_ITEM':
+			//replace the update item with the old one
+			return updateList.call(itemList,action.payload);
+		break;
+
 		default:
 			return itemList;
 	}
 };
 // delete the item that was clicked and return the new list with out the item
 function deleteItemFromList(itemId) {
-	let itemIndexToDel;
-	itemIndexToDel = this.findIndex(item => item.id == itemId);
+	let itemIndexToDel = this.findIndex(item => item.id == itemId);
 	if(itemIndexToDel != -1){
 		let listFirstPart = this.slice(0,itemIndexToDel);
 		let listSecPart = this.slice(itemIndexToDel + 1 , this.length + 1);
@@ -69,6 +73,13 @@ function fixItemsId(){
 	this.forEach(function(item){
 		item.id = item.id - 1;
 	});
+}
+// update list from editing an item
+function updateList(updateItem) {
+	console.log(updateItem);
+	let itemIndexToReplace = this.findIndex(item => item.id == updateItem.id);
+	this[itemIndexToReplace] = updateItem;
+	return this;
 }
 
 export default itemReducer;

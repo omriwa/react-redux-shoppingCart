@@ -45,6 +45,12 @@ const eventHandler = {
 		return {
 			type: 'ADD_ITEM'
 		};
+	},
+	onSave: function(itemInfo) {
+		return {
+			type: 'SAVE_ITEM',
+			payload: itemInfo
+		}
 	}
 }
 

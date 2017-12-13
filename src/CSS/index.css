@@ -39,11 +39,14 @@ thead {
 }
 
 td , th {
-	padding-top: 2% !important;
-	padding-bottom: 2% !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
 	text-align: right;
 }
 
+td {
+	text-align: left;
+}
 
 #shopping-cart , #bill {
 	background-color: lightgray;
@@ -52,4 +55,9 @@ td , th {
 
 .percentage-net {
 	float: right;
+}
+
+input {
+	height: 50%;
+	width: 50%;
 }
